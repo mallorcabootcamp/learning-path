@@ -11,3 +11,7 @@
 * [Command line](base/command-line.md)
 * [Git](base/git.md)
 
+## Challenges
+
+* [Tree component](challenges/tree-component.md)
+
