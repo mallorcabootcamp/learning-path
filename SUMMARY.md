@@ -15,3 +15,7 @@
 
 * [Tree component](challenges/tree-component.md)
 
+## JavaScript
+
+* [Error handling](javascript/error-handling.md)
+
