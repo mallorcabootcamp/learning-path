@@ -2,6 +2,11 @@
 
 * [Introduction](README.md)
 
+## Methodology
+
+* [Daily Meeting](methodology/daily-meeting.md)
+* [Weekly One to One](methodology/weekly-one-to-one.md)
+
 ## Base
 
 * [HTML5](base/html5.md)
