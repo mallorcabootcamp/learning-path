@@ -22,5 +22,9 @@
 
 ## JavaScript
 
-* [Error handling](javascript/error-handling.md)
+* [Errors](javascript/error-handling.md)
+
+## Other
+
+* [Keep up to date](other/keep-up-to-date.md)
 
