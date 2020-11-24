@@ -23,11 +23,7 @@ There is a generic Error object. However, there are this specific types.
 * [`Error.prototype.message`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/message)Mensaje de error.
 * [`Error.prototype.name`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/name)Nombre del error.
 
-## How to debug Errors
-
-### The stack
-
-The stack tells us where the error comes from
+## Examples
 
 {% embed url="https://jsfiddle.net/pyb740mg/1/" %}
 
