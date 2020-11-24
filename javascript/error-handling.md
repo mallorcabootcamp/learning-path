@@ -29,6 +29,8 @@ There is a generic Error object. However, there are this specific types.
 
 The stack tells us where the error comes from
 
+{% embed url="https://jsfiddle.net/pyb740mg/1/" %}
+
 
 
 
