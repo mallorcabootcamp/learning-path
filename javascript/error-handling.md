@@ -1,37 +1,65 @@
 ---
-description: Errors is the way JavaScript has to tell us something wrong has occurred
+description: >-
+  An exception is what happens when something didn't work well. An error is an
+  object describing that.
 ---
 
-# Errors
+# Exceptions and Errors
 
-Errors are objects that JavaScript engine or ourself as developers throw when something wrong occurs.
+An exception is what happens when something didn't work well. An error is an object describing that.
 
-## Types of Error
+## Throwing exceptions
 
-There is a generic Error object. However, there are this specific types.
+### When do I have to throw an exception?
 
-* [`EvalError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/EvalError)Crea una instancia que representa un error que ocurre con respecto a la función global [`eval()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/eval).
-* [`InternalError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/InternalError)Crea una instancia que representa un error que ocurre cuando se produce un error interno en el motor de JavaScript. Por ejemplo: "demasiada recursividad".
-* [`RangeError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/RangeError)Crea una instancia que representa un error que ocurre cuando una variable numérica o parámetro está fuera de su rango válido.
-* [`ReferenceError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/ReferenceError)Crea una instancia que representa un error que ocurre cuando se quita la referencia a una referencia no válida.
-* [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError)Crea una instancia que representa un error de sintaxis.
-* [`TypeError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/TypeError)Crea una instancia que representa un error que ocurre cuando una variable o parámetro no es de un tipo válido.
-* [`URIError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/URIError)Crea una instancia que representa un error que ocurre cuando [`encodeURI()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI) o [`decodeURI()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/decodeURI) pasan parámetros no válidos.
+You can throw an exception when you encounter an unexpected scenario. For example, when trying to access an array and that array is missing. 
 
-## Properties of Error
+However, that depends on how you are implementing your code. Implementing custom exceptions is completely optional.
 
-* [`Error.prototype.message`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/message)Mensaje de error.
-* [`Error.prototype.name`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/name)Nombre del error.
+You can throw an exception in any point of your code using throw. **This will stop the script execution.**
+
+```javascript
+throw "couldn't connect to server"
+```
+
+You can throw anything. Usually, we use the Error object:
+
+```javascript
+throw new Error("couldn't connect to server")
+```
+
+## Catching exceptions
+
+An exception stops the script execution, **unless you catch it**
+
+```javascript
+try {
+    // code that could potentially cause an exception
+} catch (e) {
+    // this will be executed when an exception gets catched
+    // from this point, your script will continue executing
+}
+```
+
+## Types and properties of Error
+
+{% embed url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Error" caption="Error object in JavaScript" %}
 
 ## Examples
 
-{% embed url="https://jsfiddle.net/pyb740mg/1/" %}
+Throwing a custom error and catching it 
 
+{% embed url="https://jsfiddle.net/albertvazquezm/824br7sc/8/" %}
 
+## Exceptions in promises
 
+Promises executors and handlers have an invisible "try...catch" wrapping your code. **Any exception is treated as a rejection**
 
+{% embed url="https://javascript.info/promise-error-handling" %}
 
+{% embed url="https://jsfiddle.net/albertvazquezm/xpg3qs5f/" %}
 
+\*\*\*\*
 
 
 

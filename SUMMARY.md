@@ -22,7 +22,7 @@
 
 ## JavaScript
 
-* [Errors](javascript/error-handling.md)
+* [Exceptions and Errors](javascript/error-handling.md)
 
 ## Other
 
