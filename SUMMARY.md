@@ -28,3 +28,7 @@
 
 * [Keep up to date](other/keep-up-to-date.md)
 
+---
+
+* [Topics to learn](topics-to-learn.md)
+
