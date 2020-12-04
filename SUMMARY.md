@@ -31,4 +31,5 @@
 ---
 
 * [Topics to learn](topics-to-learn.md)
+* [Accessibility](accessibility.md)
 
